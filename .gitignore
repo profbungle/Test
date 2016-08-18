@@ -3,3 +3,7 @@
 ################################################################################
 
 /RomanNumerals/RomanNumerals/obj/Debug
+/RomanNumerals/packages
+/RomanNumerals/RomanNumerals.Tests/bin/Debug
+/RomanNumerals/RomanNumerals.Tests/obj/Debug
+/RomanNumerals/RomanNumerals/bin/Debug
