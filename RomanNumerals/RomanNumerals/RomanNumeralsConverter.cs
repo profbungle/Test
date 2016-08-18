@@ -51,10 +51,10 @@ namespace RomanNumerals
 
                 if (remaining > 0)
                 {
-                    RomanMapping subtractor = mappings.Skip(mappings.IndexOf(mapping) + 1).Take(2).Where(x => x.IsSubtractable && (mapping.Value - x.Value == remaining)).FirstOrDefault();
+                    RomanMapping subtractor = mappings.Skip(mappings.IndexOf(mapping) + 1).Take(2).Where(x => x.IsSubtractable && (mapping.Value - x.Value <= remaining)).FirstOrDefault();
                     if (subtractor != null)
                     {
-                        remaining = 0;
+                        remaining = remaining - (mapping.Value - subtractor.Value);
                         roman.Append(subtractor.Mapping);
                         roman.Append(mapping.Mapping);
                     }
