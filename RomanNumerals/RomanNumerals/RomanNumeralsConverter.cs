@@ -1,17 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Linq;
 
 namespace RomanNumerals
 {
     public class RomanNumeralsConverter
     {
-        //private static int[] Values = {10, 5, 1 };
-        //private static string[] Mappings = {"X", "V", "I" };
-        //private static string[] NotReqeatableMappings = { "V" };
         private static List<RomanMapping> mappings;
 
         static RomanNumeralsConverter()

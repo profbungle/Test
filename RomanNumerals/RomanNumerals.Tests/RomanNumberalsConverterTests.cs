@@ -64,7 +64,7 @@ namespace RomanNumerals.Tests
             Assert.Equal("CCXXVI", RomanNumeralsConverter.ConvertToRoman(226));
             Assert.Equal("CM", RomanNumeralsConverter.ConvertToRoman(900));
             Assert.Equal("CMXCVIII", RomanNumeralsConverter.ConvertToRoman(998));
-            //Assert.Equal("MDCCXII", RomanNumeralsConverter.ConvertToRoman(1712));
+            Assert.Equal("MDCCXII", RomanNumeralsConverter.ConvertToRoman(1712));
         }
 
     }
