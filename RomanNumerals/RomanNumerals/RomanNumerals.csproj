@@ -40,6 +40,8 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="IMappingsBuilder.cs" />
+    <Compile Include="MappingsBuilder.cs" />
     <Compile Include="RomanMapping.cs" />
     <Compile Include="RomanNumeralsConverter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
