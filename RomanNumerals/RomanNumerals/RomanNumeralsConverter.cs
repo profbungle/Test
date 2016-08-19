@@ -39,11 +39,7 @@ namespace RomanNumerals
 
                 if (remaining > 0)
                 {
-                    //Select the two closest values to the current mapping value, and then only see if the subtractable mappings are less than or equal to remaining value
-                    // as per - The '1' symbols ('I', 'X', and 'C') can only be subtracted from the 2 next highest values
-                    RomanMapping subtractor = mappings.Skip(mappings.IndexOf(mapping) + 1).
-                                                Take(SubtractionRangeCount).Where(x => x.IsSubtractable && (mapping.Value - x.Value <= remaining)).
-                                                FirstOrDefault();
+                    RomanMapping subtractor = SelectValidSubtractorMapping(mapping, remaining);
                     if (subtractor != null)
                     {
                         remaining = remaining - (mapping.Value - subtractor.Value);
@@ -55,6 +51,17 @@ namespace RomanNumerals
             }
 
             return roman.ToString();
+        }
+
+        /// <summary>
+        /// Selects a valid Subtractor mapping for the current mapping as per - The '1' symbols ('I', 'X', and 'C') can only be subtracted from the 2 next highest values
+        /// </summary>
+        private RomanMapping SelectValidSubtractorMapping(RomanMapping mapping, int remaining)
+        {
+            
+            return mappings.Skip(mappings.IndexOf(mapping) + 1).
+                                                Take(SubtractionRangeCount).Where(x => x.IsSubtractable && (mapping.Value - x.Value <= remaining)).
+                                                FirstOrDefault();
         }
     }
 }
