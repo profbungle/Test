@@ -4,17 +4,16 @@ using System.Text;
 
 namespace RomanNumerals
 {
-    public class RomanNumeralsConverter
+    public class RomanNumeralsConverter : IRomanNumeralsConverter
     {
-        private static List<RomanMapping> mappings;
+        private List<RomanMapping> mappings;
 
-        static RomanNumeralsConverter()
+        public RomanNumeralsConverter(IMappingsBuilder mappingsBuilder)
         {
-            IMappingsBuilder builder = new MappingsBuilder();
-            mappings = builder.Build();
+            mappings = mappingsBuilder.Build();
         }
 
-        public static string ConvertToRoman(int numberToConvert)
+        public string ConvertToRoman(int numberToConvert)
         {
             int remaining = numberToConvert;
             StringBuilder roman = new StringBuilder();

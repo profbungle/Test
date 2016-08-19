@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IMappingsBuilder.cs" />
+    <Compile Include="IRomanNumeralsConverter.cs" />
     <Compile Include="MappingsBuilder.cs" />
     <Compile Include="RomanMapping.cs" />
     <Compile Include="RomanNumeralsConverter.cs" />

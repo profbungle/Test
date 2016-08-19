@@ -9,204 +9,211 @@ namespace RomanNumerals.Tests
 {
     public class RomanNumberalsConverterTests
     {
+        IRomanNumeralsConverter romanNumeralsConverter;
+
+        public RomanNumberalsConverterTests()
+        {
+            romanNumeralsConverter = new RomanNumeralsConverter(new MappingsBuilder());
+        }
+
         [Fact]
         public void OneTest()
         {
-             Assert.Equal("I", RomanNumeralsConverter.ConvertToRoman(1));
+             Assert.Equal("I", romanNumeralsConverter.ConvertToRoman(1));
         }
 
         [Fact]
         public void TwoTest()
         {
-            Assert.Equal("II", RomanNumeralsConverter.ConvertToRoman(2));
+            Assert.Equal("II", romanNumeralsConverter.ConvertToRoman(2));
         }
 
         [Fact]
         public void FourTest()
         {
-            Assert.Equal("IV", RomanNumeralsConverter.ConvertToRoman(4));
+            Assert.Equal("IV", romanNumeralsConverter.ConvertToRoman(4));
         }
 
         [Fact]
         public void FiveTest()
         {
-            Assert.Equal("V", RomanNumeralsConverter.ConvertToRoman(5));
+            Assert.Equal("V", romanNumeralsConverter.ConvertToRoman(5));
         }
 
         [Fact]
         public void SixTest()
         {
-            Assert.Equal("VI", RomanNumeralsConverter.ConvertToRoman(6));
+            Assert.Equal("VI", romanNumeralsConverter.ConvertToRoman(6));
         }
 
         [Fact]
         public void EightTest()
         {
-            Assert.Equal("VIII", RomanNumeralsConverter.ConvertToRoman(8));
+            Assert.Equal("VIII", romanNumeralsConverter.ConvertToRoman(8));
         }
 
         [Fact]
         public void NineTest()
         {
-            Assert.Equal("IX", RomanNumeralsConverter.ConvertToRoman(9));
+            Assert.Equal("IX", romanNumeralsConverter.ConvertToRoman(9));
         }
 
         [Fact]
         public void TenTest()
         {
-            Assert.Equal("X", RomanNumeralsConverter.ConvertToRoman(10));
+            Assert.Equal("X", romanNumeralsConverter.ConvertToRoman(10));
         }
 
         [Fact]
         public void LXIVTest()
         {
-            Assert.Equal("LXIV", RomanNumeralsConverter.ConvertToRoman(64));
+            Assert.Equal("LXIV", romanNumeralsConverter.ConvertToRoman(64));
             
         }
 
         [Fact]
         public void CCXXVITest()
         {
-            Assert.Equal("CCXXVI", RomanNumeralsConverter.ConvertToRoman(226));
+            Assert.Equal("CCXXVI", romanNumeralsConverter.ConvertToRoman(226));
         }
 
         [Fact]
         public void CMTest()
         {
-            Assert.Equal("CM", RomanNumeralsConverter.ConvertToRoman(900));
+            Assert.Equal("CM", romanNumeralsConverter.ConvertToRoman(900));
             
         }
 
         [Fact]
         public void CMXCVIIITest()
         {
-            Assert.Equal("CMXCVIII", RomanNumeralsConverter.ConvertToRoman(998));
+            Assert.Equal("CMXCVIII", romanNumeralsConverter.ConvertToRoman(998));
         }
 
         [Fact]
         public void MDCCXIITest()
         {
-            Assert.Equal("MDCCXII", RomanNumeralsConverter.ConvertToRoman(1712));
+            Assert.Equal("MDCCXII", romanNumeralsConverter.ConvertToRoman(1712));
         }
 
         [Fact]
         public void LTest()
         {
-            Assert.Equal("L", RomanNumeralsConverter.ConvertToRoman(50));
+            Assert.Equal("L", romanNumeralsConverter.ConvertToRoman(50));
         }
 
         [Fact]
         public void CTest()
         {
-            Assert.Equal("C", RomanNumeralsConverter.ConvertToRoman(100));
+            Assert.Equal("C", romanNumeralsConverter.ConvertToRoman(100));
         }
 
         [Fact]
         public void DTest()
         {
-            Assert.Equal("D", RomanNumeralsConverter.ConvertToRoman(500));
+            Assert.Equal("D", romanNumeralsConverter.ConvertToRoman(500));
         }
 
         [Fact]
         public void MTest()
         {
-            Assert.Equal("M", RomanNumeralsConverter.ConvertToRoman(1000));
+            Assert.Equal("M", romanNumeralsConverter.ConvertToRoman(1000));
         }
 
         [Fact]
         public void XXXITest()
         {
-            Assert.Equal("XXXI", RomanNumeralsConverter.ConvertToRoman(31));
+            Assert.Equal("XXXI", romanNumeralsConverter.ConvertToRoman(31));
         }
 
         [Fact]
         public void CXLVIIITest()
         {
-            Assert.Equal("CXLVIII", RomanNumeralsConverter.ConvertToRoman(148));
+            Assert.Equal("CXLVIII", romanNumeralsConverter.ConvertToRoman(148));
         }
 
         [Fact]
         public void CCXCIVTest()
         {
-            Assert.Equal("CCXCIV", RomanNumeralsConverter.ConvertToRoman(294));
+            Assert.Equal("CCXCIV", romanNumeralsConverter.ConvertToRoman(294));
         }
 
         [Fact]
         public void CCCXIITest()
         {
-            Assert.Equal("CCCXII", RomanNumeralsConverter.ConvertToRoman(312));
+            Assert.Equal("CCCXII", romanNumeralsConverter.ConvertToRoman(312));
         }
 
         [Fact]
         public void CDXXITest()
         {
-            Assert.Equal("CDXXI", RomanNumeralsConverter.ConvertToRoman(421));
+            Assert.Equal("CDXXI", romanNumeralsConverter.ConvertToRoman(421));
         }
 
         [Fact]
         public void DXXVIIITest()
         {
-            Assert.Equal("DXXVIII", RomanNumeralsConverter.ConvertToRoman(528));
+            Assert.Equal("DXXVIII", romanNumeralsConverter.ConvertToRoman(528));
         }
 
         [Fact]
         public void DCCLXXXIITest()
         {
-            Assert.Equal("DCCLXXXII", RomanNumeralsConverter.ConvertToRoman(782));
+            Assert.Equal("DCCLXXXII", romanNumeralsConverter.ConvertToRoman(782));
         }
       
         [Fact]
         public void CMXLITest()
         {
-            Assert.Equal("CMXLI", RomanNumeralsConverter.ConvertToRoman(941));
+            Assert.Equal("CMXLI", romanNumeralsConverter.ConvertToRoman(941));
         }
 
         [Fact]
         public void MXLIIITest()
         {
-            Assert.Equal("MXLIII", RomanNumeralsConverter.ConvertToRoman(1043));
+            Assert.Equal("MXLIII", romanNumeralsConverter.ConvertToRoman(1043));
         }
 
         [Fact]
         public void MCDLXXXVTest()
         {
-            Assert.Equal("MCDLXXXV", RomanNumeralsConverter.ConvertToRoman(1485));
+            Assert.Equal("MCDLXXXV", romanNumeralsConverter.ConvertToRoman(1485));
         }
 
         [Fact]
         public void MMDCCXXIIITest()
         {
-            Assert.Equal("MMDCCXXIII", RomanNumeralsConverter.ConvertToRoman(2723));
+            Assert.Equal("MMDCCXXIII", romanNumeralsConverter.ConvertToRoman(2723));
         }
 
         [Fact]
         public void MMMCLXXXVTest()
         {
-            Assert.Equal("MMMCLXXXV", RomanNumeralsConverter.ConvertToRoman(3185));
+            Assert.Equal("MMMCLXXXV", romanNumeralsConverter.ConvertToRoman(3185));
         }
 
         [Fact]
         public void MMMCCCXIIITest()
         {
-            Assert.Equal("MMMCCCXIII", RomanNumeralsConverter.ConvertToRoman(3313));
+            Assert.Equal("MMMCCCXIII", romanNumeralsConverter.ConvertToRoman(3313));
         }
 
         [Fact]
         public void MMMDCCCXLIVTest()
         {
-            Assert.Equal("MMMDCCCXLIV", RomanNumeralsConverter.ConvertToRoman(3844));
+            Assert.Equal("MMMDCCCXLIV", romanNumeralsConverter.ConvertToRoman(3844));
         }
 
         [Fact]
         public void MMMDCCCLXXXVIIITest()
         {
-            Assert.Equal("MMMDCCCLXXXVIII", RomanNumeralsConverter.ConvertToRoman(3888));
+            Assert.Equal("MMMDCCCLXXXVIII", romanNumeralsConverter.ConvertToRoman(3888));
         }
 
         [Fact]
         public void MMMCMXCIXTest()
         {
-            Assert.Equal("MMMCMXCIX", RomanNumeralsConverter.ConvertToRoman(3999));
+            Assert.Equal("MMMCMXCIX", romanNumeralsConverter.ConvertToRoman(3999));
         } 
     }
 }
